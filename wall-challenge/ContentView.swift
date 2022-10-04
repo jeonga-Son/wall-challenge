@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var playerCard = "card5"
+    var cpuCard = "card9"
+    var playerScore = 0
+    
+    
     var body: some View {
         
         ZStack {
