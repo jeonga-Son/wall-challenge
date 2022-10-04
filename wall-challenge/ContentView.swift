@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var playerCard = "card5"
-    var cpuCard = "card9"
-    var playerScore = 0
-    var cpuScore = 0
+    @State var playerCard = "card5"
+    @State var cpuCard = "card9"
+    @State var playerScore = 0
+    @State var cpuScore = 0
     
     var body: some View {
         
@@ -33,7 +33,17 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    
+                    // Update the cards
+                    playerCard = "card11"
+                    cpuCard = "card12"
+                    
+                    // Update the score
+                    playerScore += 1
+                    cpuScore += 1
+                    
+                }, label: {
                     Image("dealbutton")
                 })
                 
