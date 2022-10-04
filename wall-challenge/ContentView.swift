@@ -12,7 +12,7 @@ struct ContentView: View {
     var playerCard = "card5"
     var cpuCard = "card9"
     var playerScore = 0
-    
+    var cpuScore = 0
     
     var body: some View {
         
@@ -26,9 +26,9 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Image("card2")
+                    Image(playerCard)
                     Spacer()
-                    Image("card3")
+                    Image(cpuCard)
                     Spacer()
                 }
                 Spacer()
@@ -46,7 +46,7 @@ struct ContentView: View {
                             .foregroundColor(Color.white)
                             .lineLimit(nil)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
@@ -56,7 +56,7 @@ struct ContentView: View {
                             .font(.headline)
                             .foregroundColor(Color.white)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(cpuScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
